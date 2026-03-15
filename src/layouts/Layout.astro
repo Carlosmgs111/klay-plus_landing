@@ -21,15 +21,25 @@ const { title = 'klay+ — RAG Infrastructure for AI Applications' } = Astro.pro
   <body class="bg-bg-primary text-text-secondary font-sans antialiased overflow-x-hidden">
     <slot />
     <script>
+      // Update select option labels for current language
+      function updateSelectLang(lang) {
+        document.querySelectorAll('#use-case-select option').forEach(function(opt) {
+          var label = opt.getAttribute('data-label-' + lang);
+          if (label) opt.textContent = label;
+        });
+      }
+
       // Language toggle
       const savedLang = localStorage.getItem('klay-lang') || 'en';
       document.documentElement.setAttribute('data-lang', savedLang);
+      updateSelectLang(savedLang);
 
       window.toggleLang = function() {
         const current = document.documentElement.getAttribute('data-lang');
         const next = current === 'en' ? 'es' : 'en';
         document.documentElement.setAttribute('data-lang', next);
         localStorage.setItem('klay-lang', next);
+        updateSelectLang(next);
       };
 
       // Scroll reveal

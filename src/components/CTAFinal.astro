@@ -35,18 +35,11 @@ const formAction = import.meta.env.PUBLIC_FORM_ACTION || '#';
             class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-accent-primary/50 transition-colors appearance-none cursor-pointer text-text-muted"
             id="use-case-select"
           >
-            <option value="" disabled selected>
-              <span data-lang-en>{en.ctaFinal.useCaseDefault}</span>
-              <span data-lang-es>{es.ctaFinal.useCaseDefault}</span>
-            </option>
-            <option value="support" data-lang-en>{en.ctaFinal.useCases.support}</option>
-            <option value="support" data-lang-es>{es.ctaFinal.useCases.support}</option>
-            <option value="search" data-lang-en>{en.ctaFinal.useCases.search}</option>
-            <option value="search" data-lang-es>{es.ctaFinal.useCases.search}</option>
-            <option value="legal" data-lang-en>{en.ctaFinal.useCases.legal}</option>
-            <option value="legal" data-lang-es>{es.ctaFinal.useCases.legal}</option>
-            <option value="other" data-lang-en>{en.ctaFinal.useCases.other}</option>
-            <option value="other" data-lang-es>{es.ctaFinal.useCases.other}</option>
+            <option value="" disabled selected data-label-en={en.ctaFinal.useCaseDefault} data-label-es={es.ctaFinal.useCaseDefault}></option>
+            <option value="support" data-label-en={en.ctaFinal.useCases.support} data-label-es={es.ctaFinal.useCases.support}></option>
+            <option value="search" data-label-en={en.ctaFinal.useCases.search} data-label-es={es.ctaFinal.useCases.search}></option>
+            <option value="legal" data-label-en={en.ctaFinal.useCases.legal} data-label-es={es.ctaFinal.useCases.legal}></option>
+            <option value="other" data-label-en={en.ctaFinal.useCases.other} data-label-es={es.ctaFinal.useCases.other}></option>
           </select>
           <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
