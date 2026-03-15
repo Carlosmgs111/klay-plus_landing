@@ -1,0 +1,36 @@
+---
+import { getLocaleData } from '../i18n/t';
+const en = getLocaleData('en');
+const es = getLocaleData('es');
+
+const capabilities = [
+  { key: 'c1' as const, icon: `<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="11" cy="11" r="8" stroke-width="1.5"/><path stroke-linecap="round" stroke-width="1.5" d="m21 21-4.35-4.35"/><path stroke-linecap="round" stroke-width="1.5" d="M8 11h6M11 8v6" opacity="0.5"/></svg>` },
+  { key: 'c2' as const, icon: `<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="6" cy="6" r="2" stroke-width="1.5"/><circle cx="18" cy="6" r="2" stroke-width="1.5"/><circle cx="12" cy="18" r="2" stroke-width="1.5"/><path stroke-linecap="round" stroke-width="1.5" d="M8 6h8M7 8l4 8M17 8l-4 8"/></svg>` },
+  { key: 'c3' as const, icon: `<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path stroke-linecap="round" stroke-width="1.5" d="M9 12l2 2 4-4"/></svg>` },
+  { key: 'c4' as const, icon: `<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke-width="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke-width="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke-width="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke-width="1.5" opacity="0.5" stroke-dasharray="2 2"/></svg>` },
+];
+---
+<section id="capabilities" class="py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl font-bold text-text-primary text-center mb-16" data-reveal>
+      <span data-lang-en>{en.capabilities.title}</span>
+      <span data-lang-es>{es.capabilities.title}</span>
+    </h2>
+
+    <div class="grid sm:grid-cols-2 gap-6">
+      {capabilities.map(({ key, icon }) => (
+        <div class="glass rounded-2xl p-8 hover:bg-white/[0.07] transition-colors" data-reveal>
+          <div class="text-accent-primary mb-4" set:html={icon} />
+          <h3 class="text-lg font-semibold text-text-primary mb-3">
+            <span data-lang-en>{(en.capabilities as any)[key].title}</span>
+            <span data-lang-es>{(es.capabilities as any)[key].title}</span>
+          </h3>
+          <p class="text-text-secondary text-sm leading-relaxed">
+            <span data-lang-en>{(en.capabilities as any)[key].desc}</span>
+            <span data-lang-es>{(es.capabilities as any)[key].desc}</span>
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

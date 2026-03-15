@@ -1,0 +1,63 @@
+---
+import { getLocaleData } from '../i18n/t';
+const en = getLocaleData('en');
+const es = getLocaleData('es');
+
+const slots = [
+  { labelKey: 'storage' as const, options: ['Local (NeDB)', 'Browser (IndexedDB)', 'In-Memory'], activeIndex: 0 },
+  { labelKey: 'embedding' as const, options: ['OpenAI', 'Cohere', 'WebLLM (local)', 'Hash'], activeIndex: 0 },
+  { labelKey: 'processing' as const, options: ['Recursive', 'Sentence-aware', 'Fixed-size'], activeIndex: 0 },
+];
+---
+<section class="py-24 px-6 relative overflow-hidden">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-accent-tertiary/5 rounded-full blur-[128px]"></div>
+
+  <div class="relative z-10 max-w-6xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl font-bold text-text-primary text-center mb-4" data-reveal>
+      <span data-lang-en>{en.infra.title}</span>
+      <span data-lang-es>{es.infra.title}</span>
+    </h2>
+    <p class="text-text-secondary text-center max-w-2xl mx-auto mb-16" data-reveal>
+      <span data-lang-en>{en.infra.subtitle}</span>
+      <span data-lang-es>{es.infra.subtitle}</span>
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      {slots.map(({ labelKey, options, activeIndex }) => (
+        <div class="glass rounded-2xl p-6" data-reveal>
+          <p class="text-text-muted text-xs font-semibold tracking-wider uppercase mb-4">
+            <span data-lang-en>{(en.infra as any)[labelKey]}</span>
+            <span data-lang-es>{(es.infra as any)[labelKey]}</span>
+          </p>
+          <div class="flex flex-wrap gap-2">
+            {options.map((opt, i) => (
+              <span class={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-default ${
+                i === activeIndex
+                  ? 'bg-accent-primary/20 text-accent-tertiary border border-accent-primary/30'
+                  : 'bg-white/5 text-text-muted border border-white/5'
+              }`}>
+                {opt}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="hidden md:flex justify-center mt-8" data-reveal>
+      <div class="flex items-center gap-2 text-text-muted text-xs">
+        <div class="w-16 h-px bg-gradient-to-r from-transparent to-accent-primary/30"></div>
+        <span>+</span>
+        <div class="w-16 h-px bg-gradient-to-r from-accent-primary/30 to-accent-secondary/30"></div>
+        <span>+</span>
+        <div class="w-16 h-px bg-gradient-to-r from-accent-secondary/30 to-transparent"></div>
+        <span class="text-accent-tertiary ml-2">= your pipeline</span>
+      </div>
+    </div>
+
+    <p class="text-text-muted text-sm text-center mt-8" data-reveal>
+      <span data-lang-en>{en.infra.note}</span>
+      <span data-lang-es>{es.infra.note}</span>
+    </p>
+  </div>
+</section>

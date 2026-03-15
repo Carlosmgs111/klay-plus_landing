@@ -1,0 +1,77 @@
+---
+import { getLocaleData } from '../i18n/t';
+const en = getLocaleData('en');
+const es = getLocaleData('es');
+---
+<nav id="site-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#" class="text-xl font-bold gradient-text">klay+</a>
+
+    <!-- Desktop -->
+    <div class="hidden sm:flex items-center gap-8">
+      <a href="#capabilities" class="text-text-secondary hover:text-text-primary transition-colors text-sm">
+        <span data-lang-en>{en.nav.features}</span>
+        <span data-lang-es>{es.nav.features}</span>
+      </a>
+      <a href="#use-cases" class="text-text-secondary hover:text-text-primary transition-colors text-sm">
+        <span data-lang-en>{en.nav.useCases}</span>
+        <span data-lang-es>{es.nav.useCases}</span>
+      </a>
+      <button onclick="toggleLang()" class="text-xs px-3 py-1 rounded-full border border-white/10 text-text-muted hover:text-text-primary transition-colors">
+        <span data-lang-en>ES</span>
+        <span data-lang-es>EN</span>
+      </button>
+      <a href="#waitlist" class="bg-gradient-to-r from-accent-primary to-accent-secondary text-white text-sm font-semibold px-4 py-2 rounded-lg hover:opacity-90 transition-opacity">
+        <span data-lang-en>{en.nav.cta}</span>
+        <span data-lang-es>{es.nav.cta}</span>
+      </a>
+    </div>
+
+    <!-- Mobile hamburger -->
+    <button id="menu-toggle" class="sm:hidden text-text-primary p-2" aria-label="Toggle menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile overlay -->
+  <div id="mobile-menu" class="sm:hidden fixed inset-0 bg-bg-primary/95 backdrop-blur-lg flex flex-col items-center justify-center gap-8 hidden z-40">
+    <a href="#capabilities" class="text-lg text-text-primary" onclick="closeMobileMenu()">
+      <span data-lang-en>{en.nav.features}</span>
+      <span data-lang-es>{es.nav.features}</span>
+    </a>
+    <a href="#use-cases" class="text-lg text-text-primary" onclick="closeMobileMenu()">
+      <span data-lang-en>{en.nav.useCases}</span>
+      <span data-lang-es>{es.nav.useCases}</span>
+    </a>
+    <button onclick="toggleLang()" class="text-sm px-4 py-2 rounded-full border border-white/10 text-text-muted">
+      <span data-lang-en>Cambiar a Español</span>
+      <span data-lang-es>Switch to English</span>
+    </button>
+    <a href="#waitlist" class="bg-gradient-to-r from-accent-primary to-accent-secondary text-white font-semibold px-6 py-3 rounded-lg" onclick="closeMobileMenu()">
+      <span data-lang-en>{en.nav.cta}</span>
+      <span data-lang-es>{es.nav.cta}</span>
+    </a>
+  </div>
+</nav>
+
+<script>
+  const nav = document.getElementById('site-nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      nav?.classList.add('bg-bg-primary/80', 'backdrop-blur-lg', 'border-b', 'border-white/5');
+    } else {
+      nav?.classList.remove('bg-bg-primary/80', 'backdrop-blur-lg', 'border-b', 'border-white/5');
+    }
+  });
+
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuToggle?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+  window.closeMobileMenu = function() {
+    mobileMenu?.classList.add('hidden');
+  };
+</script>

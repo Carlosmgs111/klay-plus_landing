@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "features": "Capacidades",
+    "useCases": "Casos de uso",
+    "cta": "Acceso anticipado"
+  },
+  "hero": {
+    "eyebrow": "Plataforma de Conocimiento Semántico",
+    "headline": "Tus documentos tienen las respuestas. Te ayudamos a encontrarlas.",
+    "subtitle": "Deja de buscar por palabras clave. Empieza a encontrar por significado. klay+ transforma tus archivos en una base de conocimiento con la que puedes conversar.",
+    "cta": "Acceso anticipado",
+    "ctaSecondary": "Descubre qué puede hacer"
+  },
+  "problems": {
+    "title": "¿Te suena familiar?",
+    "p1": {
+      "title": "La búsqueda te falla",
+      "problem": "Sabes que la respuesta está en tus archivos. Pero la búsqueda por palabras no encuentra nada — porque no estás usando las palabras exactas del documento.",
+      "solution": "klay+ busca por significado. Pregunta 'cómo funciona la autenticación' y encuentra la respuesta aunque el documento diga 'flujo de login'."
+    },
+    "p2": {
+      "title": "El conocimiento está disperso",
+      "problem": "Tu información vive dispersa en PDFs, notas en markdown, archivos de texto. Las ideas relacionadas son invisibles entre sí.",
+      "solution": "klay+ conecta todo en una base de conocimiento unificada. Una búsqueda en todos tus documentos."
+    },
+    "p3": {
+      "title": "Reconectar toma horas",
+      "problem": "Cada vez que necesitas encontrar algo, relees, repasas, reorganizas. Tiempo que podrías usar en trabajo real.",
+      "solution": "klay+ te da acceso instantáneo. Pregunta y obtén respuestas en segundos, ordenadas por relevancia."
+    }
+  },
+  "capabilities": {
+    "title": "Lo que klay+ hace por ti",
+    "c1": {
+      "title": "Encuentra por significado",
+      "desc": "Haz preguntas en lenguaje natural. klay+ entiende lo que quieres decir, no solo lo que escribes. Obtén resultados ordenados por relevancia semántica."
+    },
+    "c2": {
+      "title": "Conecta conocimiento disperso",
+      "desc": "PDFs, Markdown, texto plano — todo unificado en una base buscable. Encuentra conexiones entre documentos que no sabías que existían."
+    },
+    "c3": {
+      "title": "Tus archivos, tus reglas",
+      "desc": "Todo corre en tu máquina. Tus datos no salen de tu entorno. Sin dependencia de la nube. Sin sorpresas."
+    },
+    "c4": {
+      "title": "Se adapta a tu flujo de trabajo",
+      "desc": "Elige tu almacenamiento, tu modelo de embeddings, tu estrategia de procesamiento. klay+ se adapta a tu infraestructura, no al revés."
+    }
+  },
+  "infra": {
+    "title": "Arma el stack que funcione para ti",
+    "subtitle": "klay+ no te encierra en una sola forma de hacer las cosas. Combina componentes según tus necesidades.",
+    "storage": "Donde viven tus datos",
+    "embedding": "Cómo se captura el significado",
+    "processing": "Cómo se prepara el contenido",
+    "note": "Más proveedores y estrategias próximamente. La arquitectura está diseñada para crecer contigo."
+  },
+  "search": {
+    "title": "Míralo en acción",
+    "query": "¿Cómo funciona la autenticación en nuestra API?"
+  },
+  "useCases": {
+    "title": "Diseñado para personas que piensan con documentos",
+    "worker": {
+      "name": "María",
+      "role": "Knowledge Worker",
+      "story": "María maneja más de 200 documentos de referencia. Antes pasaba 30 minutos buscando el párrafo correcto. Ahora le pregunta a klay+ y lo obtiene en segundos."
+    },
+    "researcher": {
+      "name": "Carlos",
+      "role": "Investigador",
+      "story": "Carlos recopila papers de 5 temas distintos. klay+ encuentra conexiones entre papers que él nunca habría vinculado manualmente."
+    },
+    "developer": {
+      "name": "Ana",
+      "role": "Desarrolladora",
+      "story": "Ana necesita búsqueda semántica en su app. En lugar de construir desde cero con embeddings crudos, usa klay+ como su capa de conocimiento."
+    }
+  },
+  "ctaFinal": {
+    "headline": "Desbloquea tu conocimiento",
+    "subtitle": "Únete a la lista de espera y prueba klay+ antes que nadie.",
+    "placeholder": "tu@email.com",
+    "button": "Unirme a la lista",
+    "note": "Sin spam. Solo te escribiremos cuando klay+ esté listo."
+  },
+  "footer": {
+    "copyright": "© 2026 klay+"
+  }
+}

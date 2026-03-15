@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "features": "Features",
+    "useCases": "Use Cases",
+    "cta": "Get Early Access"
+  },
+  "hero": {
+    "eyebrow": "Semantic Knowledge Platform",
+    "headline": "Your documents hold the answers. We help you find them.",
+    "subtitle": "Stop searching by keywords. Start finding by meaning. klay+ transforms your files into a knowledge base you can actually talk to.",
+    "cta": "Get Early Access",
+    "ctaSecondary": "See What It Can Do"
+  },
+  "problems": {
+    "title": "Sound familiar?",
+    "p1": {
+      "title": "Search fails you",
+      "problem": "You know the answer is in your files. But keyword search returns nothing — because you're not using the exact words the document used.",
+      "solution": "klay+ searches by meaning. Ask 'how does authentication work?' and find the answer even if the doc says 'login flow'."
+    },
+    "p2": {
+      "title": "Knowledge is scattered",
+      "problem": "Your information lives across PDFs, markdown notes, text files. Related ideas are invisible to each other.",
+      "solution": "klay+ connects everything into a unified knowledge base. One search across all your documents."
+    },
+    "p3": {
+      "title": "Reconnecting takes hours",
+      "problem": "Every time you need to find something, you re-read, re-scan, re-organize. Time you could spend on actual work.",
+      "solution": "klay+ gives you instant recall. Ask and get answers in seconds, ranked by relevance."
+    }
+  },
+  "capabilities": {
+    "title": "What klay+ does for you",
+    "c1": {
+      "title": "Find by meaning",
+      "desc": "Ask questions in natural language. klay+ understands what you mean, not just what you type. Get results ranked by semantic relevance."
+    },
+    "c2": {
+      "title": "Connect scattered knowledge",
+      "desc": "PDFs, Markdown, plain text — all unified into one searchable base. Find connections between documents you didn't know existed."
+    },
+    "c3": {
+      "title": "Your files, your rules",
+      "desc": "Everything runs on your machine. No data leaves your environment. No cloud dependency. No surprises."
+    },
+    "c4": {
+      "title": "Adapt to your workflow",
+      "desc": "Choose your storage, your embedding model, your processing strategy. klay+ adapts to your infrastructure, not the other way around."
+    }
+  },
+  "infra": {
+    "title": "Build the stack that works for you",
+    "subtitle": "klay+ doesn't lock you into one way of doing things. Mix and match components to fit your needs.",
+    "storage": "Where your data lives",
+    "embedding": "How meaning is captured",
+    "processing": "How content is prepared",
+    "note": "More providers and strategies coming soon. The architecture is designed to grow with you."
+  },
+  "search": {
+    "title": "See it in action",
+    "query": "How does authentication work in our API?"
+  },
+  "useCases": {
+    "title": "Built for people who think with documents",
+    "worker": {
+      "name": "Maria",
+      "role": "Knowledge Worker",
+      "story": "Maria manages 200+ reference documents. She used to spend 30 minutes finding the right paragraph. Now she asks klay+ and gets it in seconds."
+    },
+    "researcher": {
+      "name": "Carlos",
+      "role": "Researcher",
+      "story": "Carlos collects papers across 5 different topics. klay+ finds connections between papers he never would have linked manually."
+    },
+    "developer": {
+      "name": "Ana",
+      "role": "Developer",
+      "story": "Ana needs semantic search in her app. Instead of building from scratch with raw embeddings, she uses klay+ as her knowledge layer."
+    }
+  },
+  "ctaFinal": {
+    "headline": "Ready to unlock your knowledge?",
+    "subtitle": "Join the waitlist and be the first to try klay+ when it launches.",
+    "placeholder": "your@email.com",
+    "button": "Join the Waitlist",
+    "note": "No spam. We'll only email you when klay+ is ready."
+  },
+  "footer": {
+    "copyright": "© 2026 klay+"
+  }
+}
