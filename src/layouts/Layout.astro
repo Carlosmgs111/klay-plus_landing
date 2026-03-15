@@ -21,12 +21,17 @@ const { title = 'klay+ — RAG Infrastructure for AI Applications' } = Astro.pro
   <body class="bg-bg-primary text-text-secondary font-sans antialiased overflow-x-hidden">
     <slot />
     <script>
-      // Update select option labels for current language
+      // Update select option labels and textarea placeholder for current language
       function updateSelectLang(lang) {
         document.querySelectorAll('#use-case-select option').forEach(function(opt) {
           var label = opt.getAttribute('data-label-' + lang);
           if (label) opt.textContent = label;
         });
+        var otherTextarea = document.getElementById('use-case-other');
+        if (otherTextarea) {
+          var ph = otherTextarea.getAttribute('data-placeholder-' + lang);
+          if (ph) otherTextarea.placeholder = ph;
+        }
       }
 
       // Language toggle
@@ -82,12 +87,22 @@ const { title = 'klay+ — RAG Infrastructure for AI Applications' } = Astro.pro
       );
       document.querySelectorAll('[data-counter]').forEach((el) => counterObserver.observe(el));
 
-      // Use case select — update text color on selection
+      // Use case select — update text color and toggle "other" textarea
       const useCaseSelect = document.getElementById('use-case-select');
-      if (useCaseSelect) {
+      const otherTextarea = document.getElementById('use-case-other');
+      if (useCaseSelect && otherTextarea) {
         useCaseSelect.addEventListener('change', function() {
           this.classList.remove('text-text-muted');
           this.classList.add('text-text-primary');
+          if (this.value === 'other') {
+            otherTextarea.classList.remove('hidden');
+            otherTextarea.required = true;
+            otherTextarea.focus();
+          } else {
+            otherTextarea.classList.add('hidden');
+            otherTextarea.required = false;
+            otherTextarea.value = '';
+          }
         });
       }
 

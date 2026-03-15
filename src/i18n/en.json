@@ -87,11 +87,16 @@
     "useCaseLabel": "What are you building?",
     "useCaseDefault": "Select a use case",
     "useCases": {
-      "support": "Support / chatbot",
-      "search": "Internal knowledge search",
-      "legal": "Legal / compliance analysis",
+      "support": "Customer support / chatbot",
+      "knowledge": "Internal knowledge base",
+      "legal": "Legal / contract analysis",
+      "finance": "Financial research / compliance",
+      "healthcare": "Healthcare / clinical support",
+      "devtools": "Developer docs / code search",
+      "ecommerce": "Product search / recommendations",
       "other": "Something else"
-    }
+    },
+    "otherPlaceholder": "Tell us briefly what you're building..."
   },
   "footer": {
     "copyright": "© 2026 klay+"

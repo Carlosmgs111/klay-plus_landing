@@ -87,11 +87,16 @@
     "useCaseLabel": "¿Qué estás construyendo?",
     "useCaseDefault": "Selecciona un caso de uso",
     "useCases": {
-      "support": "Soporte / chatbot",
-      "search": "Búsqueda de conocimiento interno",
-      "legal": "Análisis legal / compliance",
+      "support": "Soporte al cliente / chatbot",
+      "knowledge": "Base de conocimiento interna",
+      "legal": "Análisis legal / contratos",
+      "finance": "Investigación financiera / compliance",
+      "healthcare": "Salud / soporte clínico",
+      "devtools": "Docs de desarrollo / búsqueda de código",
+      "ecommerce": "Búsqueda de productos / recomendaciones",
       "other": "Otra cosa"
-    }
+    },
+    "otherPlaceholder": "Cuéntanos brevemente qué estás construyendo..."
   },
   "footer": {
     "copyright": "© 2026 klay+"
