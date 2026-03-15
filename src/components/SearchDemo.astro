@@ -4,9 +4,9 @@ const en = getLocaleData('en');
 const es = getLocaleData('es');
 
 const results = [
-  { file: 'api-auth-guide.md', section: 'Section 3.2: "Authentication Flow"', match: 98, snippet: 'The API uses JWT tokens for authentication. Each request must include a Bearer token in the Authorization header...' },
-  { file: 'security-overview.pdf', section: 'Page 12: "Access Control"', match: 91, snippet: 'Access control is enforced at the gateway level. Role-based permissions determine which endpoints a user can reach...' },
-  { file: 'dev-notes.md', section: '"Login Implementation Notes"', match: 84, snippet: 'The login flow validates credentials against the user store, generates a session token, and sets an httpOnly cookie...' },
+  { file: 'policies/refund-policy.md', section: 'Chunk 14', match: 96, snippet: 'Full refunds are available within 30 days of purchase. After 30 days, a prorated refund may be issued based on remaining service period...' },
+  { file: 'support/faq-billing.md', section: 'Chunk 7', match: 89, snippet: 'If a customer requests a refund, verify the purchase date and check whether the subscription falls under the standard or enterprise policy...' },
+  { file: 'legal/terms-of-service.pdf', section: 'Chunk 42', match: 78, snippet: 'Refund eligibility is subject to the conditions outlined in Section 8.3. Chargebacks initiated without prior contact may result in account suspension...' },
 ];
 ---
 <section class="py-24 px-6">
@@ -16,7 +16,7 @@ const results = [
       <span data-lang-es>{es.search.title}</span>
     </h2>
 
-    <div class="glass rounded-2xl p-8" data-reveal>
+    <div class="animated-border p-8" data-reveal style="--reveal-delay: 0.1s;">
       <!-- Search input mockup -->
       <div class="flex items-center gap-3 mb-8 pb-6 border-b border-white/10">
         <svg class="w-5 h-5 text-accent-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -31,8 +31,8 @@ const results = [
 
       <!-- Results -->
       <div class="space-y-4">
-        {results.map(({ file, section, match, snippet }) => (
-          <div class="bg-white/[0.03] rounded-xl p-5 border border-white/5 hover:border-accent-primary/20 transition-colors">
+        {results.map(({ file, section, match, snippet }, index) => (
+          <div class="bg-white/[0.03] rounded-xl p-5 border border-white/5 hover:border-accent-primary/20 transition-colors" data-reveal style={`--reveal-delay: ${0.3 + index * 0.15}s`}>
             <div class="flex items-start justify-between gap-4 mb-2">
               <div>
                 <span class="text-text-primary text-sm font-medium">{file}</span>
@@ -42,8 +42,8 @@ const results = [
                 match >= 95 ? 'bg-green-500/15 text-green-400' :
                 match >= 90 ? 'bg-accent-primary/15 text-accent-tertiary' :
                 'bg-amber-500/15 text-amber-400'
-              }`}>
-                {match}%
+              }`} data-counter={match} data-counter-suffix="%">
+                0%
               </span>
             </div>
             <p class="text-text-muted text-xs leading-relaxed">{snippet}</p>

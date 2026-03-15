@@ -4,10 +4,10 @@ const en = getLocaleData('en');
 const es = getLocaleData('es');
 
 const capabilities = [
-  { key: 'c1' as const, icon: `<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="11" cy="11" r="8" stroke-width="1.5"/><path stroke-linecap="round" stroke-width="1.5" d="m21 21-4.35-4.35"/><path stroke-linecap="round" stroke-width="1.5" d="M8 11h6M11 8v6" opacity="0.5"/></svg>` },
-  { key: 'c2' as const, icon: `<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="6" cy="6" r="2" stroke-width="1.5"/><circle cx="18" cy="6" r="2" stroke-width="1.5"/><circle cx="12" cy="18" r="2" stroke-width="1.5"/><path stroke-linecap="round" stroke-width="1.5" d="M8 6h8M7 8l4 8M17 8l-4 8"/></svg>` },
-  { key: 'c3' as const, icon: `<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path stroke-linecap="round" stroke-width="1.5" d="M9 12l2 2 4-4"/></svg>` },
-  { key: 'c4' as const, icon: `<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke-width="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke-width="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke-width="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke-width="1.5" opacity="0.5" stroke-dasharray="2 2"/></svg>` },
+  { key: 'c1' as const, span: 'md:col-span-2', icon: `<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v13m0 0l-4-4m4 4l4-4"/><path stroke-linecap="round" stroke-width="1.5" d="M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>` },
+  { key: 'c2' as const, span: 'md:col-span-1', icon: `<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="4" y="4" width="16" height="4" rx="1" stroke-width="1.5"/><rect x="4" y="10" width="16" height="4" rx="1" stroke-width="1.5"/><rect x="4" y="16" width="10" height="4" rx="1" stroke-width="1.5" opacity="0.5"/></svg>` },
+  { key: 'c3' as const, span: 'md:col-span-1', icon: `<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="7" cy="7" r="2" stroke-width="1.5"/><circle cx="17" cy="10" r="2" stroke-width="1.5"/><circle cx="10" cy="17" r="2" stroke-width="1.5"/><path stroke-linecap="round" stroke-width="1.5" d="M9 8l6 1.5M8.5 9l1 6" opacity="0.5"/></svg>` },
+  { key: 'c4' as const, span: 'md:col-span-2', icon: `<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="11" cy="11" r="7" stroke-width="1.5"/><path stroke-linecap="round" stroke-width="1.5" d="m20 20-3.5-3.5"/><circle cx="11" cy="11" r="3" stroke-width="1.5" opacity="0.5"/><circle cx="11" cy="11" r="0.5" fill="currentColor"/></svg>` },
 ];
 ---
 <section id="capabilities" class="py-24 px-6">
@@ -17,9 +17,9 @@ const capabilities = [
       <span data-lang-es>{es.capabilities.title}</span>
     </h2>
 
-    <div class="grid sm:grid-cols-2 gap-6">
-      {capabilities.map(({ key, icon }) => (
-        <div class="glass rounded-2xl p-8 hover:bg-white/[0.07] transition-colors" data-reveal>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {capabilities.map(({ key, span, icon }, index) => (
+        <div class={`glass-card rounded-2xl p-8 ${span}`} data-reveal style={`--reveal-delay: ${index * 0.15}s`}>
           <div class="text-accent-primary mb-4" set:html={icon} />
           <h3 class="text-lg font-semibold text-text-primary mb-3">
             <span data-lang-en>{(en.capabilities as any)[key].title}</span>

@@ -17,21 +17,21 @@ const slots = [
       <span data-lang-en>{en.infra.title}</span>
       <span data-lang-es>{es.infra.title}</span>
     </h2>
-    <p class="text-text-secondary text-center max-w-2xl mx-auto mb-16" data-reveal>
+    <p class="text-text-secondary text-center max-w-2xl mx-auto mb-16" data-reveal style="--reveal-delay: 0.1s;">
       <span data-lang-en>{en.infra.subtitle}</span>
       <span data-lang-es>{es.infra.subtitle}</span>
     </p>
 
     <div class="grid md:grid-cols-3 gap-6">
-      {slots.map(({ labelKey, options, activeIndex }) => (
-        <div class="glass rounded-2xl p-6" data-reveal>
+      {slots.map(({ labelKey, options, activeIndex }, index) => (
+        <div class="glass-card rounded-2xl p-6" data-reveal data-infra-group style={`--reveal-delay: ${index * 0.15}s`}>
           <p class="text-text-muted text-xs font-semibold tracking-wider uppercase mb-4">
             <span data-lang-en>{(en.infra as any)[labelKey]}</span>
             <span data-lang-es>{(es.infra as any)[labelKey]}</span>
           </p>
           <div class="flex flex-wrap gap-2">
             {options.map((opt, i) => (
-              <span class={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-default ${
+              <span data-infra-option class={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                 i === activeIndex
                   ? 'bg-accent-primary/20 text-accent-tertiary border border-accent-primary/30'
                   : 'bg-white/5 text-text-muted border border-white/5'
@@ -44,18 +44,18 @@ const slots = [
       ))}
     </div>
 
-    <div class="hidden md:flex justify-center mt-8" data-reveal>
+    <div class="hidden md:flex justify-center mt-8" data-reveal style="--reveal-delay: 0.45s;">
       <div class="flex items-center gap-2 text-text-muted text-xs">
         <div class="w-16 h-px bg-gradient-to-r from-transparent to-accent-primary/30"></div>
         <span>+</span>
         <div class="w-16 h-px bg-gradient-to-r from-accent-primary/30 to-accent-secondary/30"></div>
         <span>+</span>
         <div class="w-16 h-px bg-gradient-to-r from-accent-secondary/30 to-transparent"></div>
-        <span class="text-accent-tertiary ml-2">= your pipeline</span>
+        <span class="text-accent-tertiary ml-2">= your RAG pipeline</span>
       </div>
     </div>
 
-    <p class="text-text-muted text-sm text-center mt-8" data-reveal>
+    <p class="text-text-muted text-sm text-center mt-8" data-reveal style="--reveal-delay: 0.5s;">
       <span data-lang-en>{en.infra.note}</span>
       <span data-lang-es>{es.infra.note}</span>
     </p>

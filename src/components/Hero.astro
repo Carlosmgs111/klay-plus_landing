@@ -3,28 +3,30 @@ import { getLocaleData } from '../i18n/t';
 const en = getLocaleData('en');
 const es = getLocaleData('es');
 ---
-<section class="relative min-h-screen flex items-center justify-center dot-grid overflow-hidden">
-  <!-- Gradient orbs -->
-  <div class="absolute top-1/4 -left-32 w-96 h-96 bg-accent-primary/20 rounded-full blur-[128px]"></div>
-  <div class="absolute bottom-1/4 -right-32 w-80 h-80 bg-accent-secondary/15 rounded-full blur-[128px]"></div>
+<section class="relative min-h-screen flex items-center justify-center mesh-bg overflow-hidden">
+  <!-- Animated gradient orbs -->
+  <div class="absolute top-1/4 -left-32 w-96 h-96 bg-accent-primary/20 rounded-full blur-[128px] orb-float orb-pulse"></div>
+  <div class="absolute bottom-1/4 -right-32 w-80 h-80 bg-accent-secondary/15 rounded-full blur-[128px] orb-float orb-pulse" style="animation-delay: -10s;"></div>
 
   <div class="relative z-10 max-w-4xl mx-auto px-6 text-center pt-24">
-    <p class="text-accent-tertiary text-xs font-semibold tracking-[0.2em] uppercase mb-6" data-reveal>
-      <span data-lang-en>{en.hero.eyebrow}</span>
-      <span data-lang-es>{es.hero.eyebrow}</span>
+    <p class="text-accent-tertiary text-xs font-semibold tracking-[0.2em] uppercase mb-6" data-reveal style="--reveal-delay: 0s;">
+      <span class="eyebrow-badge">
+        <span data-lang-en>{en.hero.eyebrow}</span>
+        <span data-lang-es>{es.hero.eyebrow}</span>
+      </span>
     </p>
 
-    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-text-primary leading-tight mb-6" data-reveal>
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-text-primary leading-tight mb-6" data-reveal style="--reveal-delay: 0.1s;">
       <span data-lang-en>{en.hero.headline}</span>
       <span data-lang-es>{es.hero.headline}</span>
     </h1>
 
-    <p class="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto mb-10" data-reveal>
+    <p class="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto mb-10" data-reveal style="--reveal-delay: 0.2s;">
       <span data-lang-en>{en.hero.subtitle}</span>
       <span data-lang-es>{es.hero.subtitle}</span>
     </p>
 
-    <div class="flex flex-col sm:flex-row gap-4 justify-center" data-reveal>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center" data-reveal style="--reveal-delay: 0.3s;">
       <a href="#waitlist" class="bg-gradient-to-r from-accent-primary to-accent-secondary text-white font-semibold px-8 py-3 rounded-lg hover:opacity-90 transition-opacity text-base">
         <span data-lang-en>{en.hero.cta}</span>
         <span data-lang-es>{es.hero.cta}</span>
@@ -34,5 +36,12 @@ const es = getLocaleData('es');
         <span data-lang-es>{es.hero.ctaSecondary}</span>
       </a>
     </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 scroll-indicator">
+    <svg class="w-6 h-6 text-text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/>
+    </svg>
   </div>
 </section>

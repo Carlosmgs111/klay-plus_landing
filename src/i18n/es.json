@@ -1,88 +1,88 @@
 {
   "nav": {
-    "features": "Capacidades",
+    "features": "Cómo funciona",
     "useCases": "Casos de uso",
     "cta": "Acceso anticipado"
   },
   "hero": {
-    "eyebrow": "Plataforma de Conocimiento Semántico",
-    "headline": "Tus documentos tienen las respuestas. Te ayudamos a encontrarlas.",
-    "subtitle": "Deja de buscar por palabras clave. Empieza a encontrar por significado. klay+ transforma tus archivos en una base de conocimiento con la que puedes conversar.",
+    "eyebrow": "Infraestructura RAG",
+    "headline": "La capa de retrieval que no tienes que construir.",
+    "subtitle": "klay+ se encarga de la ingesta, el chunking, los embeddings y la búsqueda para que tu equipo se enfoque en la aplicación. Composable, self-hostable y diseñado para iterar.",
     "cta": "Acceso anticipado",
-    "ctaSecondary": "Descubre qué puede hacer"
+    "ctaSecondary": "Ver cómo funciona"
   },
   "problems": {
     "title": "¿Te suena familiar?",
     "p1": {
-      "title": "La búsqueda te falla",
-      "problem": "Sabes que la respuesta está en tus archivos. Pero la búsqueda por palabras no encuentra nada — porque no estás usando las palabras exactas del documento.",
-      "solution": "klay+ busca por significado. Pregunta 'cómo funciona la autenticación' y encuentra la respuesta aunque el documento diga 'flujo de login'."
+      "title": "El pipeline es la parte difícil",
+      "problem": "Conectar modelos de embedding, vector stores y estrategias de chunking es sorprendentemente complejo. Terminas dedicando más tiempo a la plomería que a tu aplicación.",
+      "solution": "klay+ te da un pipeline completo de ingesta a retrieval listo para usar. Conecta tus documentos y empieza a consultar en minutos."
     },
     "p2": {
-      "title": "El conocimiento está disperso",
-      "problem": "Tu información vive dispersa en PDFs, notas en markdown, archivos de texto. Las ideas relacionadas son invisibles entre sí.",
-      "solution": "klay+ conecta todo en una base de conocimiento unificada. Una búsqueda en todos tus documentos."
+      "title": "Cada proyecto es diferente",
+      "problem": "Un bot de soporte necesita un chunking distinto al de una herramienta de búsqueda legal. Un solo modelo de embedding no sirve para todo. Pero cambiar componentes implica reescribir el pipeline.",
+      "solution": "klay+ es composable por diseño. Cambia almacenamiento, embeddings y estrategias de chunking sin modificar el código de tu aplicación."
     },
     "p3": {
-      "title": "Reconectar toma horas",
-      "problem": "Cada vez que necesitas encontrar algo, relees, repasas, reorganizas. Tiempo que podrías usar en trabajo real.",
-      "solution": "klay+ te da acceso instantáneo. Pregunta y obtén respuestas en segundos, ordenadas por relevancia."
+      "title": "Mejorar la calidad del retrieval es difícil",
+      "problem": "Tu retrieval no es lo suficientemente bueno, pero re-indexar todo con una nueva estrategia es costoso y arriesgado. No puedes experimentar sin downtime.",
+      "solution": "klay+ te permite generar nuevas proyecciones en paralelo. Prueba diferentes estrategias de chunking o embedding sin tocar tu índice existente."
     }
   },
   "capabilities": {
-    "title": "Lo que klay+ hace por ti",
+    "title": "Cómo funciona el pipeline",
     "c1": {
-      "title": "Encuentra por significado",
-      "desc": "Haz preguntas en lenguaje natural. klay+ entiende lo que quieres decir, no solo lo que escribes. Obtén resultados ordenados por relevancia semántica."
+      "title": "Ingesta cualquier formato",
+      "desc": "Alimenta PDFs, Markdown, HTML o texto plano. klay+ normaliza y prepara tu contenido para el procesamiento — sin lidiar con formatos."
     },
     "c2": {
-      "title": "Conecta conocimiento disperso",
-      "desc": "PDFs, Markdown, texto plano — todo unificado en una base buscable. Encuentra conexiones entre documentos que no sabías que existían."
+      "title": "Chunking inteligente",
+      "desc": "Divide documentos usando estrategias recursivas, por oraciones, de tamaño fijo o personalizadas. Adapta el chunking a tus necesidades de retrieval."
     },
     "c3": {
-      "title": "Tus archivos, tus reglas",
-      "desc": "Todo corre en tu máquina. Tus datos no salen de tu entorno. Sin dependencia de la nube. Sin sorpresas."
+      "title": "Embedding flexible",
+      "desc": "Elige entre OpenAI, Cohere, modelos locales vía WebLLM, o embeddings basados en hash para desarrollo rápido. Cambia de proveedor sin re-arquitectar."
     },
     "c4": {
-      "title": "Se adapta a tu flujo de trabajo",
-      "desc": "Elige tu almacenamiento, tu modelo de embeddings, tu estrategia de procesamiento. klay+ se adapta a tu infraestructura, no al revés."
+      "title": "Retrieval semántico",
+      "desc": "Consulta por significado, no por palabras clave. Obtén resultados ordenados por relevancia para que tu aplicación siempre muestre el contenido más útil."
     }
   },
   "infra": {
-    "title": "Arma el stack que funcione para ti",
-    "subtitle": "klay+ no te encierra en una sola forma de hacer las cosas. Combina componentes según tus necesidades.",
+    "title": "Elige tu stack. Nosotros conectamos todo.",
+    "subtitle": "Cada componente es intercambiable. Empieza con lo más simple, evoluciona hacia lo que necesites en producción.",
     "storage": "Donde viven tus datos",
     "embedding": "Cómo se captura el significado",
     "processing": "Cómo se prepara el contenido",
     "note": "Más proveedores y estrategias próximamente. La arquitectura está diseñada para crecer contigo."
   },
   "search": {
-    "title": "Míralo en acción",
-    "query": "¿Cómo funciona la autenticación en nuestra API?"
+    "title": "Mira el retrieval en acción",
+    "query": "¿Cuáles son las condiciones de reembolso?"
   },
   "useCases": {
-    "title": "Diseñado para personas que piensan con documentos",
-    "worker": {
-      "name": "María",
-      "role": "Knowledge Worker",
-      "story": "María maneja más de 200 documentos de referencia. Antes pasaba 30 minutos buscando el párrafo correcto. Ahora le pregunta a klay+ y lo obtiene en segundos."
+    "title": "Equipos que ya construyen con klay+",
+    "supportBot": {
+      "name": "Bot de Soporte Empresarial",
+      "role": "Fintech",
+      "story": "Un equipo fintech ingresó más de 500 documentos de políticas y tenía retrieval semántico funcionando en una tarde. Su bot de soporte ahora resuelve el 60% de los tickets sin intervención humana."
     },
-    "researcher": {
-      "name": "Carlos",
-      "role": "Investigador",
-      "story": "Carlos recopila papers de 5 temas distintos. klay+ encuentra conexiones entre papers que él nunca habría vinculado manualmente."
+    "knowledgeAgent": {
+      "name": "Agente de Conocimiento Interno",
+      "role": "Org de Ingeniería",
+      "story": "Una organización de ingeniería indexó sus runbooks, RFCs y documentos de onboarding. Los nuevos empleados ahora encuentran respuestas en segundos en lugar de preguntar en Slack."
     },
-    "developer": {
-      "name": "Ana",
-      "role": "Desarrolladora",
-      "story": "Ana necesita búsqueda semántica en su app. En lugar de construir desde cero con embeddings crudos, usa klay+ como su capa de conocimiento."
+    "legalAnalysis": {
+      "name": "Análisis de Documentos Legales",
+      "role": "Legaltech",
+      "story": "Una startup legaltech iteró en estrategias de chunking hasta alcanzar 95% de relevancia en la extracción de cláusulas contractuales. Sin necesidad de re-arquitectar."
     }
   },
   "ctaFinal": {
-    "headline": "Desbloquea tu conocimiento",
+    "headline": "¿Listo para construir tu capa de retrieval?",
     "subtitle": "Únete a la lista de espera y prueba klay+ antes que nadie.",
-    "placeholder": "tu@email.com",
-    "button": "Unirme a la lista",
+    "placeholder": "dev@tuempresa.com",
+    "button": "Obtener acceso anticipado",
     "note": "Sin spam. Solo te escribiremos cuando klay+ esté listo."
   },
   "footer": {
