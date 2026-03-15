@@ -93,7 +93,7 @@ const { title = 'klay+ — RAG Infrastructure for AI Applications' } = Astro.pro
       if (useCaseSelect && otherTextarea) {
         useCaseSelect.addEventListener('change', function() {
           this.classList.remove('text-text-muted');
-          this.classList.add('text-text-primary');
+          this.classList.add('text-accent-tertiary');
           if (this.value === 'other') {
             otherTextarea.classList.remove('hidden');
             otherTextarea.required = true;
