@@ -83,7 +83,15 @@
     "subtitle": "Únete a la lista de espera y prueba klay+ antes que nadie.",
     "placeholder": "dev@tuempresa.com",
     "button": "Obtener acceso anticipado",
-    "note": "Sin spam. Solo te escribiremos cuando klay+ esté listo."
+    "note": "Sin spam. Solo te escribiremos cuando klay+ esté listo.",
+    "useCaseLabel": "¿Qué estás construyendo?",
+    "useCaseDefault": "Selecciona un caso de uso",
+    "useCases": {
+      "support": "Soporte / chatbot",
+      "search": "Búsqueda de conocimiento interno",
+      "legal": "Análisis legal / compliance",
+      "other": "Otra cosa"
+    }
   },
   "footer": {
     "copyright": "© 2026 klay+"

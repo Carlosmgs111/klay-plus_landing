@@ -83,7 +83,15 @@
     "subtitle": "Join the waitlist and be the first to try klay+ when it launches.",
     "placeholder": "dev@yourcompany.com",
     "button": "Get Early Access",
-    "note": "No spam. We'll only email you when klay+ is ready."
+    "note": "No spam. We'll only email you when klay+ is ready.",
+    "useCaseLabel": "What are you building?",
+    "useCaseDefault": "Select a use case",
+    "useCases": {
+      "support": "Support / chatbot",
+      "search": "Internal knowledge search",
+      "legal": "Legal / compliance analysis",
+      "other": "Something else"
+    }
   },
   "footer": {
     "copyright": "© 2026 klay+"

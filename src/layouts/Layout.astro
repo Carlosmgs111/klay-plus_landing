@@ -72,6 +72,15 @@ const { title = 'klay+ — RAG Infrastructure for AI Applications' } = Astro.pro
       );
       document.querySelectorAll('[data-counter]').forEach((el) => counterObserver.observe(el));
 
+      // Use case select — update text color on selection
+      const useCaseSelect = document.getElementById('use-case-select');
+      if (useCaseSelect) {
+        useCaseSelect.addEventListener('change', function() {
+          this.classList.remove('text-text-muted');
+          this.classList.add('text-text-primary');
+        });
+      }
+
       // Infra pill click handler
       document.querySelectorAll('[data-infra-group]').forEach((group) => {
         group.querySelectorAll('[data-infra-option]').forEach((pill) => {

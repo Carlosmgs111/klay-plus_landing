@@ -20,15 +20,39 @@ const formAction = import.meta.env.PUBLIC_FORM_ACTION || '#';
         <span data-lang-es>{es.ctaFinal.subtitle}</span>
       </p>
 
-      <form action={formAction} method="POST" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" data-reveal style="--reveal-delay: 0.2s;">
+      <form action={formAction} method="POST" class="flex flex-col gap-3 max-w-md mx-auto" data-reveal style="--reveal-delay: 0.2s;">
         <input
           type="email"
           name="email"
           required
-          class="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-text-primary text-sm placeholder:text-text-muted focus:outline-none focus:border-accent-primary/50 transition-colors"
+          class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-text-primary text-sm placeholder:text-text-muted focus:outline-none focus:border-accent-primary/50 transition-colors"
           placeholder={en.ctaFinal.placeholder}
         />
-        <button type="submit" class="bg-gradient-to-r from-accent-primary to-accent-secondary text-white font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity text-sm whitespace-nowrap">
+        <div class="relative">
+          <select
+            name="use_case"
+            required
+            class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-accent-primary/50 transition-colors appearance-none cursor-pointer text-text-muted"
+            id="use-case-select"
+          >
+            <option value="" disabled selected>
+              <span data-lang-en>{en.ctaFinal.useCaseDefault}</span>
+              <span data-lang-es>{es.ctaFinal.useCaseDefault}</span>
+            </option>
+            <option value="support" data-lang-en>{en.ctaFinal.useCases.support}</option>
+            <option value="support" data-lang-es>{es.ctaFinal.useCases.support}</option>
+            <option value="search" data-lang-en>{en.ctaFinal.useCases.search}</option>
+            <option value="search" data-lang-es>{es.ctaFinal.useCases.search}</option>
+            <option value="legal" data-lang-en>{en.ctaFinal.useCases.legal}</option>
+            <option value="legal" data-lang-es>{es.ctaFinal.useCases.legal}</option>
+            <option value="other" data-lang-en>{en.ctaFinal.useCases.other}</option>
+            <option value="other" data-lang-es>{es.ctaFinal.useCases.other}</option>
+          </select>
+          <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </div>
+        <button type="submit" class="w-full bg-gradient-to-r from-accent-primary to-accent-secondary text-white font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity text-sm whitespace-nowrap">
           <span data-lang-en>{en.ctaFinal.button}</span>
           <span data-lang-es>{es.ctaFinal.button}</span>
         </button>
