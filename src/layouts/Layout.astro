@@ -142,8 +142,11 @@ const { title = 'klay+ — RAG Infrastructure for AI Applications' } = Astro.pro
 
           fetch(waitlistForm.action, {
             method: 'POST',
-            body: new FormData(waitlistForm),
-            headers: { 'Accept': 'application/json' }
+            body: new URLSearchParams(new FormData(waitlistForm)),
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/x-www-form-urlencoded'
+            }
           })
           .then(function(res) {
             if (res.ok) {
