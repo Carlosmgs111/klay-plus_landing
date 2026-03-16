@@ -96,7 +96,10 @@
       "ecommerce": "Product search / recommendations",
       "other": "Something else"
     },
-    "otherPlaceholder": "Tell us briefly what you're building..."
+    "otherPlaceholder": "Tell us briefly what you're building...",
+    "toastSuccess": "You're on the list! We'll be in touch soon.",
+    "toastError": "Something went wrong. Please try again.",
+    "submitting": "Sending..."
   },
   "footer": {
     "copyright": "© 2026 klay+"

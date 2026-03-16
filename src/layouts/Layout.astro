@@ -119,6 +119,54 @@ const { title = 'klay+ — RAG Infrastructure for AI Applications' } = Astro.pro
         });
       }
 
+      // Waitlist form — AJAX submit with toast
+      const waitlistForm = document.getElementById('waitlist-form');
+      const toast = document.getElementById('toast');
+      const submitBtn = document.getElementById('waitlist-btn');
+      if (waitlistForm && toast && submitBtn) {
+        function showToast(type) {
+          const lang = document.documentElement.getAttribute('data-lang') || 'en';
+          toast.textContent = toast.getAttribute('data-' + type + '-' + lang);
+          toast.className = 'toast toast-' + type;
+          setTimeout(function() {
+            toast.classList.add('toast-hide');
+          }, 4000);
+        }
+
+        waitlistForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var lang = document.documentElement.getAttribute('data-lang') || 'en';
+          var originalText = submitBtn.innerHTML;
+          submitBtn.textContent = toast.getAttribute('data-submitting-' + lang);
+          submitBtn.disabled = true;
+
+          fetch(waitlistForm.action, {
+            method: 'POST',
+            body: new FormData(waitlistForm),
+            headers: { 'Accept': 'application/json' }
+          })
+          .then(function(res) {
+            if (res.ok) {
+              showToast('success');
+              waitlistForm.reset();
+              useCaseSelect.classList.remove('text-accent-tertiary');
+              useCaseSelect.classList.add('text-text-muted');
+              otherTextarea.classList.add('hidden');
+              otherTextarea.required = false;
+            } else {
+              showToast('error');
+            }
+          })
+          .catch(function() {
+            showToast('error');
+          })
+          .finally(function() {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+          });
+        });
+      }
+
       // Infra pill click handler
       document.querySelectorAll('[data-infra-group]').forEach((group) => {
         group.querySelectorAll('[data-infra-option]').forEach((pill) => {

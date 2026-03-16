@@ -20,7 +20,7 @@ const formAction = import.meta.env.PUBLIC_FORM_ACTION || '#';
         <span data-lang-es>{es.ctaFinal.subtitle}</span>
       </p>
 
-      <form action={formAction} method="POST" class="flex flex-col gap-3 max-w-md mx-auto" data-reveal style="--reveal-delay: 0.2s;">
+      <form action={formAction} method="POST" id="waitlist-form" class="flex flex-col gap-3 max-w-md mx-auto" data-reveal style="--reveal-delay: 0.2s;">
         <input
           type="email"
           name="email"
@@ -57,11 +57,23 @@ const formAction = import.meta.env.PUBLIC_FORM_ACTION || '#';
           data-placeholder-en={en.ctaFinal.otherPlaceholder}
           data-placeholder-es={es.ctaFinal.otherPlaceholder}
         ></textarea>
-        <button type="submit" class="w-full bg-gradient-to-r from-accent-primary to-accent-secondary text-white font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity text-sm whitespace-nowrap">
+        <button type="submit" id="waitlist-btn" class="w-full bg-gradient-to-r from-accent-primary to-accent-secondary text-white font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity text-sm whitespace-nowrap">
           <span data-lang-en>{en.ctaFinal.button}</span>
           <span data-lang-es>{es.ctaFinal.button}</span>
         </button>
       </form>
+
+      <!-- Toast -->
+      <div id="toast" class="toast" role="alert"
+        data-success-en={en.ctaFinal.toastSuccess}
+        data-success-es={es.ctaFinal.toastSuccess}
+        data-error-en={en.ctaFinal.toastError}
+        data-error-es={es.ctaFinal.toastError}
+        data-submitting-en={en.ctaFinal.submitting}
+        data-submitting-es={es.ctaFinal.submitting}
+        data-btn-en={en.ctaFinal.button}
+        data-btn-es={es.ctaFinal.button}
+      ></div>
 
       <p class="text-text-muted text-xs mt-4" data-reveal style="--reveal-delay: 0.3s;">
         <span data-lang-en>{en.ctaFinal.note}</span>

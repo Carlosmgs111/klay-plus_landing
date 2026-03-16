@@ -96,7 +96,10 @@
       "ecommerce": "Búsqueda de productos / recomendaciones",
       "other": "Otra cosa"
     },
-    "otherPlaceholder": "Cuéntanos brevemente qué estás construyendo..."
+    "otherPlaceholder": "Cuéntanos brevemente qué estás construyendo...",
+    "toastSuccess": "¡Estás en la lista! Te contactaremos pronto.",
+    "toastError": "Algo salió mal. Inténtalo de nuevo.",
+    "submitting": "Enviando..."
   },
   "footer": {
     "copyright": "© 2026 klay+"
