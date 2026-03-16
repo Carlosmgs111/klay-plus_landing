@@ -4,7 +4,7 @@ import '../styles/global.css';
 interface Props {
   title?: string;
 }
-const { title = 'Mnemolix — RAG Infrastructure for AI Applications' } = Astro.props;
+const { title = 'klay+ — RAG Infrastructure for AI Applications' } = Astro.props;
 const umamiId = import.meta.env.PUBLIC_UMAMI_ID || '';
 ---
 <!doctype html>
@@ -53,7 +53,7 @@ const umamiId = import.meta.env.PUBLIC_UMAMI_ID || '';
       }
 
       // Language toggle
-      const savedLang = localStorage.getItem('mnemolix-lang') || 'en';
+      const savedLang = localStorage.getItem('klay-lang') || 'en';
       document.documentElement.setAttribute('data-lang', savedLang);
       updateSelectLang(savedLang);
 
@@ -61,7 +61,7 @@ const umamiId = import.meta.env.PUBLIC_UMAMI_ID || '';
         const current = document.documentElement.getAttribute('data-lang');
         const next = current === 'en' ? 'es' : 'en';
         document.documentElement.setAttribute('data-lang', next);
-        localStorage.setItem('mnemolix-lang', next);
+        localStorage.setItem('klay-lang', next);
         updateSelectLang(next);
       };
 

@@ -7,7 +7,7 @@
   "hero": {
     "eyebrow": "Infraestructura RAG",
     "headline": "La capa de retrieval que no tienes que construir.",
-    "subtitle": "Mnemolix se encarga de la ingesta, el chunking, los embeddings y la búsqueda para que tu equipo se enfoque en la aplicación. Composable, self-hostable y diseñado para iterar.",
+    "subtitle": "klay+ se encarga de la ingesta, el chunking, los embeddings y la búsqueda para que tu equipo se enfoque en la aplicación. Composable, self-hostable y diseñado para iterar.",
     "cta": "Acceso anticipado",
     "ctaSecondary": "Ver cómo funciona"
   },
@@ -16,24 +16,24 @@
     "p1": {
       "title": "El pipeline es la parte difícil",
       "problem": "Conectar modelos de embedding, vector stores y estrategias de chunking es sorprendentemente complejo. Terminas dedicando más tiempo a la plomería que a tu aplicación.",
-      "solution": "Mnemolix te da un pipeline completo de ingesta a retrieval listo para usar. Conecta tus documentos y empieza a consultar en minutos."
+      "solution": "klay+ te da un pipeline completo de ingesta a retrieval listo para usar. Conecta tus documentos y empieza a consultar en minutos."
     },
     "p2": {
       "title": "Cada proyecto es diferente",
       "problem": "Un bot de soporte necesita un chunking distinto al de una herramienta de búsqueda legal. Un solo modelo de embedding no sirve para todo. Pero cambiar componentes implica reescribir el pipeline.",
-      "solution": "Mnemolix es composable por diseño. Cambia almacenamiento, embeddings y estrategias de chunking sin modificar el código de tu aplicación."
+      "solution": "klay+ es composable por diseño. Cambia almacenamiento, embeddings y estrategias de chunking sin modificar el código de tu aplicación."
     },
     "p3": {
       "title": "Mejorar la calidad del retrieval es difícil",
       "problem": "Tu retrieval no es lo suficientemente bueno, pero re-indexar todo con una nueva estrategia es costoso y arriesgado. No puedes experimentar sin downtime.",
-      "solution": "Mnemolix te permite generar nuevas proyecciones en paralelo. Prueba diferentes estrategias de chunking o embedding sin tocar tu índice existente."
+      "solution": "klay+ te permite generar nuevas proyecciones en paralelo. Prueba diferentes estrategias de chunking o embedding sin tocar tu índice existente."
     }
   },
   "capabilities": {
     "title": "Cómo funciona el pipeline",
     "c1": {
       "title": "Ingesta cualquier formato",
-      "desc": "Alimenta PDFs, Markdown, HTML o texto plano. Mnemolix normaliza y prepara tu contenido para el procesamiento — sin lidiar con formatos."
+      "desc": "Alimenta PDFs, Markdown, HTML o texto plano. klay+ normaliza y prepara tu contenido para el procesamiento — sin lidiar con formatos."
     },
     "c2": {
       "title": "Chunking inteligente",
@@ -61,7 +61,7 @@
     "query": "¿Cuáles son las condiciones de reembolso?"
   },
   "useCases": {
-    "title": "Equipos que ya construyen con Mnemolix",
+    "title": "Equipos que ya construyen con klay+",
     "supportBot": {
       "name": "Bot de Soporte Empresarial",
       "role": "Fintech",
@@ -80,10 +80,10 @@
   },
   "ctaFinal": {
     "headline": "¿Listo para construir tu capa de retrieval?",
-    "subtitle": "Únete a la lista de espera y prueba Mnemolix antes que nadie.",
+    "subtitle": "Únete a la lista de espera y prueba klay+ antes que nadie.",
     "placeholder": "dev@tuempresa.com",
     "button": "Obtener acceso anticipado",
-    "note": "Sin spam. Solo te escribiremos cuando Mnemolix esté listo.",
+    "note": "Sin spam. Solo te escribiremos cuando klay+ esté listo.",
     "useCaseLabel": "¿Qué estás construyendo?",
     "useCaseDefault": "Selecciona un caso de uso",
     "useCases": {
@@ -102,6 +102,6 @@
     "submitting": "Enviando..."
   },
   "footer": {
-    "copyright": "© 2026 Mnemolix"
+    "copyright": "© 2026 klay+"
   }
 }
