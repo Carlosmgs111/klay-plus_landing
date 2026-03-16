@@ -7,7 +7,7 @@
   "hero": {
     "eyebrow": "RAG Infrastructure",
     "headline": "The retrieval layer you don't have to build.",
-    "subtitle": "klay+ handles ingestion, chunking, embedding, and retrieval so your team can focus on the application. Composable, self-hostable, and built for iteration.",
+    "subtitle": "Mnemolix handles ingestion, chunking, embedding, and retrieval so your team can focus on the application. Composable, self-hostable, and built for iteration.",
     "cta": "Get Early Access",
     "ctaSecondary": "See How It Works"
   },
@@ -16,24 +16,24 @@
     "p1": {
       "title": "The pipeline is the hard part",
       "problem": "Wiring together embedding models, vector stores, and chunking strategies is surprisingly complex. You spend more time on plumbing than on your actual application.",
-      "solution": "klay+ gives you a complete ingestion-to-retrieval pipeline out of the box. Plug in your documents and start querying in minutes."
+      "solution": "Mnemolix gives you a complete ingestion-to-retrieval pipeline out of the box. Plug in your documents and start querying in minutes."
     },
     "p2": {
       "title": "Every project is different",
       "problem": "A support bot needs different chunking than a legal search tool. One embedding model doesn't fit every use case. But swapping components means rewriting the pipeline.",
-      "solution": "klay+ is composable by design. Swap storage, embedding, and chunking strategies without changing your application code."
+      "solution": "Mnemolix is composable by design. Swap storage, embedding, and chunking strategies without changing your application code."
     },
     "p3": {
       "title": "Retrieval quality is hard to improve",
       "problem": "Your retrieval isn't good enough, but re-indexing everything with a new strategy is expensive and risky. You can't experiment without downtime.",
-      "solution": "klay+ lets you generate new projections side-by-side. Test different chunking or embedding strategies without touching your existing index."
+      "solution": "Mnemolix lets you generate new projections side-by-side. Test different chunking or embedding strategies without touching your existing index."
     }
   },
   "capabilities": {
     "title": "How the pipeline works",
     "c1": {
       "title": "Ingest anything",
-      "desc": "Feed in PDFs, Markdown, HTML, or plain text. klay+ normalizes and prepares your content for processing — no format wrangling required."
+      "desc": "Feed in PDFs, Markdown, HTML, or plain text. Mnemolix normalizes and prepares your content for processing — no format wrangling required."
     },
     "c2": {
       "title": "Smart chunking",
@@ -61,7 +61,7 @@
     "query": "What are the refund policy conditions?"
   },
   "useCases": {
-    "title": "Teams already building with klay+",
+    "title": "Teams already building with Mnemolix",
     "supportBot": {
       "name": "Enterprise Support Bot",
       "role": "Fintech",
@@ -80,10 +80,10 @@
   },
   "ctaFinal": {
     "headline": "Ready to build your retrieval layer?",
-    "subtitle": "Join the waitlist and be the first to try klay+ when it launches.",
+    "subtitle": "Join the waitlist and be the first to try Mnemolix when it launches.",
     "placeholder": "dev@yourcompany.com",
     "button": "Get Early Access",
-    "note": "No spam. We'll only email you when klay+ is ready.",
+    "note": "No spam. We'll only email you when Mnemolix is ready.",
     "useCaseLabel": "What are you building?",
     "useCaseDefault": "Select a use case",
     "useCases": {
@@ -102,6 +102,6 @@
     "submitting": "Sending..."
   },
   "footer": {
-    "copyright": "© 2026 klay+"
+    "copyright": "© 2026 Mnemolix"
   }
 }
